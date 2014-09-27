@@ -1,0 +1,151 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.0.2
+3 info using node@v0.10.32
+4 verbose node symlink /usr/local/bin/node
+5 warn package.json y@0.0.0 No repository field.
+6 verbose readDependencies using package.json deps
+7 verbose install where, deps [ '/Users/kendall/Development/toofuzzy',
+7 verbose install   [ 'grunt',
+7 verbose install     'grunt-contrib-copy',
+7 verbose install     'grunt-contrib-concat',
+7 verbose install     'grunt-contrib-uglify',
+7 verbose install     'grunt-contrib-jshint',
+7 verbose install     'grunt-contrib-cssmin',
+7 verbose install     'grunt-contrib-connect',
+7 verbose install     'grunt-contrib-clean',
+7 verbose install     'grunt-contrib-htmlmin',
+7 verbose install     'grunt-bower-install',
+7 verbose install     'grunt-contrib-imagemin',
+7 verbose install     'grunt-contrib-watch',
+7 verbose install     'grunt-usemin',
+7 verbose install     'grunt-mocha',
+7 verbose install     'grunt-svgmin',
+7 verbose install     'grunt-concurrent',
+7 verbose install     'load-grunt-tasks',
+7 verbose install     'time-grunt',
+7 verbose install     'jshint-stylish',
+7 verbose install     'grunt-chrome-manifest',
+7 verbose install     'grunt-contrib-compress',
+7 verbose install     'jquery' ] ]
+8 info preinstall y@0.0.0
+9 verbose readDependencies using package.json deps
+10 verbose already installed skipping grunt@~0.4.1 /Users/kendall/Development/toofuzzy
+11 verbose already installed skipping grunt-contrib-copy@~0.5.0 /Users/kendall/Development/toofuzzy
+12 verbose already installed skipping grunt-contrib-concat@~0.3.0 /Users/kendall/Development/toofuzzy
+13 verbose already installed skipping grunt-contrib-uglify@~0.4.0 /Users/kendall/Development/toofuzzy
+14 verbose already installed skipping grunt-contrib-jshint@~0.9.2 /Users/kendall/Development/toofuzzy
+15 verbose already installed skipping grunt-contrib-cssmin@~0.9.0 /Users/kendall/Development/toofuzzy
+16 verbose already installed skipping grunt-contrib-connect@~0.7.1 /Users/kendall/Development/toofuzzy
+17 verbose already installed skipping grunt-contrib-clean@~0.5.0 /Users/kendall/Development/toofuzzy
+18 verbose already installed skipping grunt-contrib-htmlmin@~0.2.0 /Users/kendall/Development/toofuzzy
+19 verbose already installed skipping grunt-bower-install@~1.0.0 /Users/kendall/Development/toofuzzy
+20 verbose already installed skipping grunt-contrib-imagemin@~0.7.1 /Users/kendall/Development/toofuzzy
+21 verbose already installed skipping grunt-contrib-watch@~0.6.1 /Users/kendall/Development/toofuzzy
+22 verbose already installed skipping grunt-usemin@~2.1.0 /Users/kendall/Development/toofuzzy
+23 verbose already installed skipping grunt-mocha@~0.4.10 /Users/kendall/Development/toofuzzy
+24 verbose already installed skipping grunt-svgmin@~0.4.0 /Users/kendall/Development/toofuzzy
+25 verbose already installed skipping grunt-concurrent@~0.5.0 /Users/kendall/Development/toofuzzy
+26 verbose already installed skipping load-grunt-tasks@~0.4.0 /Users/kendall/Development/toofuzzy
+27 verbose already installed skipping time-grunt@~0.3.1 /Users/kendall/Development/toofuzzy
+28 verbose already installed skipping jshint-stylish@~0.1.5 /Users/kendall/Development/toofuzzy
+29 verbose already installed skipping grunt-chrome-manifest@~0.2.0 /Users/kendall/Development/toofuzzy
+30 verbose already installed skipping grunt-contrib-compress@~0.9.1 /Users/kendall/Development/toofuzzy
+31 verbose cache add [ 'jquery@~2.0.3', null ]
+32 verbose cache add spec="jquery@~2.0.3" args=["jquery@~2.0.3",null]
+33 verbose parsed spec { raw: 'jquery@~2.0.3',
+33 verbose parsed spec   scope: null,
+33 verbose parsed spec   name: 'jquery',
+33 verbose parsed spec   rawSpec: '~2.0.3',
+33 verbose parsed spec   spec: '>=2.0.3 <2.1.0',
+33 verbose parsed spec   type: 'range' }
+34 verbose parsed spec { raw: 'jquery@~2.0.3',
+34 verbose parsed spec   scope: null,
+34 verbose parsed spec   name: 'jquery',
+34 verbose parsed spec   rawSpec: '~2.0.3',
+34 verbose parsed spec   spec: '>=2.0.3 <2.1.0',
+34 verbose parsed spec   type: 'range' }
+35 verbose addNamed [ 'jquery', '>=2.0.3 <2.1.0' ]
+36 verbose addNamed [ null, '>=2.0.3 <2.1.0' ]
+37 silly lockFile 1a02f66a-jquery-2-0-3-2-1-0 jquery@>=2.0.3 <2.1.0
+38 verbose lock jquery@>=2.0.3 <2.1.0 /Users/kendall/.npm/1a02f66a-jquery-2-0-3-2-1-0.lock
+39 silly addNameRange { name: 'jquery', range: '>=2.0.3 <2.1.0', hasData: false }
+40 verbose mapToRegistry name jquery
+41 verbose mapToRegistry uri https://registry.npmjs.org/jquery
+42 verbose request on initialization, where is /jquery
+43 verbose request after pass 1, where is /jquery
+44 verbose request url raw /jquery
+45 verbose request resolving registry [ 'https://registry.npmjs.org/', './jquery' ]
+46 verbose request after pass 2, where is https://registry.npmjs.org/jquery
+47 verbose request no auth needed
+48 info attempt registry request try #1 at 14:22:52
+49 verbose request id c4292d250b4b42b0
+50 http request GET https://registry.npmjs.org/jquery
+51 http 200 https://registry.npmjs.org/jquery
+52 silly registry.get cb [ 200,
+52 silly registry.get   { date: 'Sat, 27 Sep 2014 21:22:53 GMT',
+52 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+52 silly registry.get     etag: '"84PIJ8FQ65WMU30Q6P88NB8LO"',
+52 silly registry.get     'content-type': 'application/json',
+52 silly registry.get     'cache-control': 'max-age=60',
+52 silly registry.get     'content-length': '46991',
+52 silly registry.get     'accept-ranges': 'bytes',
+52 silly registry.get     via: '1.1 varnish',
+52 silly registry.get     age: '5726',
+52 silly registry.get     'x-served-by': 'cache-sjc3134-SJC',
+52 silly registry.get     'x-cache': 'HIT',
+52 silly registry.get     'x-cache-hits': '1',
+52 silly registry.get     'x-timer': 'S1411852973.017888,VS0,VE101',
+52 silly registry.get     vary: 'Accept',
+52 silly registry.get     'keep-alive': 'timeout=10, max=50',
+52 silly registry.get     connection: 'Keep-Alive' } ]
+53 silly addNameRange number 2 { name: 'jquery', range: '>=2.0.3 <2.1.0', hasData: true }
+54 silly addNameRange versions [ 'jquery',
+54 silly addNameRange   [ '1.5.1',
+54 silly addNameRange     '1.6.2',
+54 silly addNameRange     '1.6.3',
+54 silly addNameRange     '1.7.2',
+54 silly addNameRange     '1.7.3',
+54 silly addNameRange     '1.8.2',
+54 silly addNameRange     '1.8.3',
+54 silly addNameRange     '2.1.0-beta2',
+54 silly addNameRange     '2.1.0-beta3',
+54 silly addNameRange     '1.11.0-beta3',
+54 silly addNameRange     '1.11.0-rc1',
+54 silly addNameRange     '2.1.0-rc1',
+54 silly addNameRange     '1.11.0',
+54 silly addNameRange     '2.1.0',
+54 silly addNameRange     '2.1.1-beta1',
+54 silly addNameRange     '1.11.1-beta1',
+54 silly addNameRange     '2.1.1-rc1',
+54 silly addNameRange     '1.11.1-rc1',
+54 silly addNameRange     '2.1.1-rc2',
+54 silly addNameRange     '1.11.1-rc2',
+54 silly addNameRange     '2.1.1',
+54 silly addNameRange     '1.11.1',
+54 silly addNameRange     '1.9.1' ] ]
+55 silly lockFile 1a02f66a-jquery-2-0-3-2-1-0 jquery@>=2.0.3 <2.1.0
+56 silly lockFile 1a02f66a-jquery-2-0-3-2-1-0 jquery@>=2.0.3 <2.1.0
+57 verbose stack Error: No compatible version found: jquery@'>=2.0.3 <2.1.0'
+57 verbose stack Valid install targets:
+57 verbose stack ["1.5.1","1.6.2","1.6.3","1.7.2","1.7.3","1.8.2","1.8.3","2.1.0-beta2","2.1.0-beta3","1.11.0-beta3","1.11.0-rc1","2.1.0-rc1","1.11.0","2.1.0","2.1.1-beta1","1.11.1-beta1","2.1.1-rc1","1.11.1-rc1","2.1.1-rc2","1.11.1-rc2","2.1.1","1.11.1","1.9.1"]
+57 verbose stack
+57 verbose stack     at installTargetsError (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:258:12)
+57 verbose stack     at next (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:237:17)
+57 verbose stack     at setData (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:214:5)
+57 verbose stack     at saved (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:167:7)
+57 verbose stack     at Object.oncomplete (fs.js:107:15)
+58 verbose cwd /Users/kendall/Development/toofuzzy
+59 error Darwin 14.0.0
+60 error argv "node" "/usr/local/bin/npm" "install"
+61 error node v0.10.32
+62 error npm  v2.0.2
+63 error code ETARGET
+64 error notarget No compatible version found: jquery@'>=2.0.3 <2.1.0'
+64 error notarget Valid install targets:
+64 error notarget ["1.5.1","1.6.2","1.6.3","1.7.2","1.7.3","1.8.2","1.8.3","2.1.0-beta2","2.1.0-beta3","1.11.0-beta3","1.11.0-rc1","2.1.0-rc1","1.11.0","2.1.0","2.1.1-beta1","1.11.1-beta1","2.1.1-rc1","1.11.1-rc1","2.1.1-rc2","1.11.1-rc2","2.1.1","1.11.1","1.9.1"]
+64 error notarget
+64 error notarget This is most likely not a problem with npm itself.
+64 error notarget In most cases you or one of your dependencies are requesting
+64 error notarget a package version that doesn't exist.
+65 verbose exit [ 1, true ]
