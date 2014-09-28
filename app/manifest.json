@@ -14,6 +14,12 @@
             "scripts/background.js"
         ]
     },
+    "content_scripts": [
+        {
+          "matches": ["http://*/*"],
+          "js": ["highlighter.js"]
+        }
+      ],
     "browser_action": {
         "default_icon": {
             "19": "images/icon-19.png",
