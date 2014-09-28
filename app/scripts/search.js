@@ -2,11 +2,11 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     console.log(sender.tab ?
                 "from a content script:" + sender.tab.url :
                 "from the extension");
-    if (request.searchQuery) {
-    	console.log("got search query: " + request.searchQuery);
+    // if (request.searchQuery) {
+    	console.log("got search query: '" + request.searchQuery + "'");
     	startTheFireworks(request.searchQuery);
     	sendResponse({farewell: "goodbye"});
-  	}
+  	// }
 });
 
 	var parse = function() {
@@ -61,10 +61,10 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 		});
 	};
 
+	var dom = parse();
+	var prevResults; //saves results from last search  to clear higlights later
+	var rainbowTimer;
 	var startTheFireworks = function(searchTerm){
-		var dom = parse();
-		var prevResults; //saves results from last search  to clear higlights later
-		var rainbowTimer;
 
 		if(searchTerm){
 			if(prevResults) { 
