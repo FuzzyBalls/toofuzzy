@@ -1,3 +1,14 @@
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    console.log(sender.tab ?
+                "from a content script:" + sender.tab.url :
+                "from the extension");
+    if (request.searchQuery) {
+    	console.log("got search query: " + request.searchQuery);
+    	startTheFireworks(request.searchQuery);
+    	sendResponse({farewell: "goodbye"});
+  	}
+});
+
 	var parse = function() {
 		var parseResults = [];
 		var tagsToGet = ["p", "td", "h1", "h2", "h3", "h4", "h5", "h6", "li", "label", "pre", "code", "blockquote"];
@@ -50,37 +61,39 @@
 		});
 	};
 
-
-	$(document).ready(function(){
-		//set up
-		$('body').prepend($('<input id="fuzzysearchbox">'));
+	var startTheFireworks = function(searchTerm){
 		var dom = parse();
 		var prevResults; //saves results from last search  to clear higlights later
 		var rainbowTimer;
 
+		if(searchTerm){
+			if(prevResults) { 
+				highlightForDemo(prevResults, false); //clear highlights
+			}
+			var results = doSearch(searchTerm, dom); // get new results
+			// highlightForDemo(results, true); //highlight new results
+			prevResults = results; // set prevResults to clear later
+			if(!rainbowTimer){
+				rainbowTimer = setInterval(function(){
+					highlightForDemo(prevResults, true);	
+				}, 100)
+			}
+		} else {
+			if(prevResults) { 
+				highlightForDemo(prevResults, false); //clear highlights
+				prevResults = null;
+			}
+			clearInterval(rainbowTimer);
+			rainbowTimer = null;
+		}
+	}
+
+	$(document).ready(function(){
+		//set up
+		$('body').prepend($('<input id="fuzzysearchbox">'));
+
+
 		// search when input changes
 		$('#fuzzysearchbox, #site-search-query').on('input', function(e){
-			var searchTerm = e.currentTarget.value;
-			if(searchTerm){
-				if(prevResults) { 
-					highlightForDemo(prevResults, false); //clear highlights
-				}
-				var results = doSearch(searchTerm, dom); // get new results
-				// highlightForDemo(results, true); //highlight new results
-				prevResults = results; // set prevResults to clear later
-				if(!rainbowTimer){
-					rainbowTimer = setInterval(function(){
-						highlightForDemo(prevResults, true);	
-					}, 100)
-				}
-
-			} else {
-				if(prevResults) { 
-					highlightForDemo(prevResults, false); //clear highlights
-					prevResults = null;
-				}
-				clearInterval(rainbowTimer);
-				rainbowTimer = null;
-			}
 		});
 	});
