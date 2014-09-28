@@ -1,4 +1,5 @@
 	$('body').prepend($('<input id="fuzzysearchbox">'));
+
 	var parse = function(){
 		return document.getElementsByTagName('p');
 	}
