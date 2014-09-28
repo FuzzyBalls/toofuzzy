@@ -89,10 +89,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 	}
 
 	$(document).ready(function(){
-		//set up
-		$('body').prepend($('<input id="fuzzysearchbox">'));
-
-
 		// search when input changes
 		$('#fuzzysearchbox, #site-search-query').on('input', function(e){
 		});
