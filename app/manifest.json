@@ -11,8 +11,7 @@
     "background": {
         "persistent": false,
         "scripts": [
-            "scripts/chromereload.js"//,
-            // "scripts/background.js"
+            "scripts/chromereload.js"
         ]
     },
     "content_scripts": [
