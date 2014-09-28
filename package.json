@@ -1,5 +1,5 @@
 {
-  "name": "y",
+  "name": "FuzzyBalls",
   "version": "0.0.0",
   "dependencies": {},
   "devDependencies": {
@@ -23,8 +23,8 @@
     "time-grunt": "~0.3.1",
     "jshint-stylish": "~0.1.5",
     "grunt-chrome-manifest": "~0.2.0",
-    "grunt-contrib-compress": "~0.9.1"
-  },
+    "grunt-contrib-compress": "~0.9.1",
+     },
   "engines": {
     "node": ">=0.8.0"
   }

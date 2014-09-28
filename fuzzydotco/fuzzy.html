@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="jquery.min.js"></script>
+	<script src="fuse.min.js"></script>
+	<script src="highlighter.js"></script>
+	<script src="search.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+</head>
+
+<body style="font-family: Lato; overflow: hidden;" >
+	<div style="z-index: 100;">
+		<div style="margin-top: 20em; margin-bottom: 1em; "><h1 style="background-color: white; color: #666666; font-size: 24px; font-weight: 300; width: 400px; text-align: center;text-transform: uppercase; padding: 1em; border: 1px solid #666666; margin: 0 auto;">What is Fuzzy Search?</h1></div>
+
+		<input id="fuzzysearchbox" style="font-size: 16px; border: 1px solid #666666; display: block; margin: 0 auto;" type="text" />
+	</div>
+	<div id="source" style="z-index: -100; position: absolute; top: 0; ">
+		<style>#source p { display: inline; color: white; }</style>
+	</div>
+	<script>
+		var stringarr = ['The quick brown fox jumped over the lazy dog.', 'Romeo, Romeo, where fore art thou, Romeo.', 'I like big butts and I cannot lie, you other brothers can\'t deny.', 'It was the best of times, it was the worst of times.', 'Dat tho.', 'They see me rollin\', they hatin\', patrollin\', and tryin\' to catch me ridin\' dirty.', 'Billy Jean is not my lover, she just the girl who thinks that I am the one, but the kid is not my son.'];
+		var random;
+		var element, text;
+		for (var i = 0; i < 500; i++) {
+			element = document.createElement('P');
+			random = Math.floor((Math.random() * stringarr.length));
+			text = document.createTextNode(stringarr[random]);
+			console.log(text);
+			element.appendChild(text);
+			document.getElementById('source').appendChild(element);
+		}
+	</script>
+</body>
+
+</html>
