@@ -11,4 +11,4 @@
 //         clearInterval(changeHighlightColor);
 // }, 2000);
 
-document.getElementsByTagName("body")[0].innerHTML = "";
+//document.getElementsByTagName("body")[0].innerHTML = "";
