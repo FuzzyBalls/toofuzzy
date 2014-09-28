@@ -9,19 +9,19 @@
     },
     "default_locale": "en",
     "background": {
+        "persistent": false,
         "scripts": [
-            "scripts/chromereload.js",
-            "scripts/background.js"
+            "scripts/chromereload.js"//,
+            // "scripts/background.js"
         ]
     },
     "content_scripts": [
         {
           "matches": ["http://*/*", "https://*/*"],
           "js": ["/bower_components/fuse/src/fuse.js",
-                    "/bower_components/jquery/dist/jquery.js",
-                    "highlighter.js",
-                    "/scripts/search.js"
-                    ]
+                "/bower_components/jquery/dist/jquery.js",
+                "highlighter.js",
+                "/scripts/search.js"]
         }
       ],
     "browser_action": {
@@ -31,5 +31,6 @@
         },
         "default_title": "FuzzyBalls",
         "default_popup": "popup.html"
-    }
+    },
+     "permissions": ["activeTab"]
 }
