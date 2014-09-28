@@ -10,7 +10,18 @@ $(function(){
 		doSearch(searchTerm, fuzzy);
 	});
 
-	function doSearch(needle, fsearch){
+function doSearch(needle, fsearch) {
+    var pieces = fsearch.split(".");
+    var atoms = pieces.split("");
+    var shards = needle.split("");
+
+two separate fuse searches
+only return if there all searches return something
+return matches that are closest to each other.
+
+}
+
+/*	function doSearch(needle, fsearch){
 		//debug
         console.log(needle);
 	    var block = fsearch.search(needle);
@@ -30,7 +41,7 @@ $(function(){
                }
             }
         }
-    }
+    }*/
 
 /*    function search(str, pattern) {
         var words = str.split(' ')
