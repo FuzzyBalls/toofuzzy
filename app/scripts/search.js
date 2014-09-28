@@ -7,7 +7,29 @@ $(function(){
 		doSearch(searchTerm, "");
 	});
 
-	function doSearch(needle, haystack){
-		console.log(needle);
+	// Returns an array of all dom elements on the page containing text 
+	function parse() {
+	  var $domElements = $("body");
+	  var results = []; 
+	  // edge case for stuff around <head></head> tag
+	  findText($domElements[0], results);
+	  return results;
+	}
+
+	function findText($domElement, results) {
+	  if(domElement) {
+	    if($domElement.innerText) {
+	      results.push($domElement);
+	    } 
+	    var $domChildren = $domElement.children;
+	    if($domChildren) {
+	      for(c : $domChildren) {
+	        findText(c, results);
+	      }
+	    }
+	  }
+	  return results;
 	}
 });
+
+
