@@ -14,12 +14,22 @@
             "scripts/background.js"
         ]
     },
+    "content_scripts": [
+        {
+          "matches": ["http://*/*", "https://*/*"],
+          "js": ["/bower_components/fuse/src/fuse.js",
+                    "/bower_components/jquery/dist/jquery.js",
+                    "highlighter.js",
+                    "/scripts/search.js"
+                    ]
+        }
+      ],
     "browser_action": {
         "default_icon": {
             "19": "images/icon-19.png",
             "38": "images/icon-38.png"
         },
-        "default_title": "y",
+        "default_title": "FuzzyBalls",
         "default_popup": "popup.html"
     }
 }
