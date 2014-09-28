@@ -17,7 +17,11 @@
     "content_scripts": [
         {
           "matches": ["http://*/*"],
-          "js": ["highlighter.js"]
+          "js": ["/bower_components/fuse/src/fuse.js",
+                    "/bower_components/jquery/dist/jquery.js",
+                    "highlighter.js",
+                    "/scripts/search.js"
+                    ]
         }
       ],
     "browser_action": {
