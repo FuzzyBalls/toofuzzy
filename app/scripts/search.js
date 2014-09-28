@@ -1,18 +1,4 @@
 var fuzzySearch = (function($) {
-
-    chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-        // console.log(sender.tab ?
-        // "from a content script:" + sender.tab.url :
-        // "from the extension");
-        // if (request.searchQuery) {
-        // console.log("got search query: '" + request.searchQuery + "'");
-        startTheFireworks(request.searchQuery);
-        sendResponse({
-            farewell: "goodbye"
-        });
-        // }
-    });
-
     chrome.runtime.onConnect.addListener(function(port) {
         console.assert(port.name == "fuzzypopup");
 
