@@ -13,10 +13,13 @@
 	// highlightOn optional. False = remove highlights from all elements in the results
 	var highlight = function(results, highlightOn){
 		console.log("attemptin to highlight results");
+		var resultsCount = results.length;
 		$.each(results, function(index, element){
+			var aValue = 1 - (index / resultsCount);
+
 			var $element = $(element);
 			if(highlightOn){
-				$element.css("background-color", "red");
+				$element.css("background-color", "rgba(255, 0, 0, " + aValue + ")");
 			} else {
 				$element.css("background-color", "transparent");	
 			}
