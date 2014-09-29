@@ -1,10 +1,18 @@
 var fuzzySearch = (function($) {
+    var isDemo = false;
+
     chrome.runtime.onConnect.addListener(function(port) {
         console.assert(port.name == "fuzzypopup");
 
         port.onMessage.addListener(function(msg) {
-        	console.log(msg.searchQuery);
-        	startTheFireworks(msg.searchQuery);
+        	// console.log(msg.searchQuery);
+        	if(msg.toggleDemo){
+        		isDemo = !isDemo;
+        		console.log(isDemo);
+        	} else {
+        		startTheFireworks(msg.searchQuery);
+        		console.log("starting");
+        	}
         });
 
         port.onDisconnect.addListener(function(){
@@ -34,27 +42,27 @@ var fuzzySearch = (function($) {
     };
 
     // highlightOn optional. False = remove highlights from all elements in the results
-    var highlight = function(results, highlightOn) {
-        var resultsCount = results.length;
-        $.each(results, function(index, element) {
-            var aValue = (1 - (index / resultsCount)) * .6 + .4; // opacity of the background
+    // var highlight = function(results, highlightOn) {
+    //     var resultsCount = results.length;
+    //     $.each(results, function(index, element) {
+    //         var aValue = (1 - (index / resultsCount)) * .6 + .4; // opacity of the background
 
-            var $element = $(element);
-            if (highlightOn) {
-                $element.css("background-color", "rgba(255, 255, 0, " + aValue + ")");
-            } else {
-                $element.css("background-color", "transparent");
-            }
-        });
-    };
+    //         var $element = $(element);
+    //         if (highlightOn) {
+    //             $element.css("background-color", "rgba(255, 255, 0, " + aValue + ")");
+    //         } else {
+    //             $element.css("background-color", "transparent");
+    //         }
+    //     });
+    // };
 
     // highlightOn optional. False = remove highlights from all elements in the results
     var highlightForDemo = function(results, highlightOn) {
         var resultsCount = results.length;
         $.each(results, function(index, element) {
-            var rValue = Math.floor(Math.random() * 255);
-            var gValue = Math.floor(Math.random() * 255);
-            var bValue = Math.floor(Math.random() * 255);
+            var rValue = isDemo ? Math.floor(Math.random() * 155) + 100 : 255;
+            var gValue = isDemo ? Math.floor(Math.random() * 155) + 100 : 0;
+            var bValue = isDemo ? Math.floor(Math.random() * 155) + 100 : 0;
 
             var aValue = (1 - (index / resultsCount)) * .6 + .4; // opacity of the background
 
