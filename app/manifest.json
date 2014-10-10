@@ -19,6 +19,7 @@
           "matches": ["http://*/*", "https://*/*"],
           "js": ["/bower_components/fuse/src/fuse.js",
                 "/bower_components/jquery/dist/jquery.js",
+                "/bower_components/string_score/string_score.js",
                 "highlighter.js",
                 "/scripts/search.js"]
         }

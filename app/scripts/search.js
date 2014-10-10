@@ -33,11 +33,38 @@ var fuzzySearch = (function($) {
     };
 
     var doSearch = function(needle, haystack) {
-        var f = new Fuse(haystack, {
-            keys: ['innerText']
-        });
-        var results = f.search(needle);
+    	var results = [];
 
+    	haystack.forEach(function(element){
+    		var score = element.innerText.score(needle, 0.5);
+
+    		if(score >= 0.2){
+    			var result = {
+    				domElement: element,
+    				score: score
+    			};
+    			console.log(result);
+    			results.push(result);
+    		}
+    	});
+
+        console.log(results);
+
+        // results.sort(function(a, b){
+        // 	if(a.score - b.score){
+        // 		return -1;
+        // 	}
+
+        // 	if(a.score -b.score){
+        // 		return 1;
+        // 	}
+
+        // 	return 0;
+        // });
+        
+        for(var i = 0; i < results.length; i++){
+        	results[i] = results.domElement;
+        }
         return results;
     };
 
